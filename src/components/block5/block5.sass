@@ -1,0 +1,187 @@
+.Block5
+    background-image: url(./image.png)
+    width: 100%
+    height: 800px
+    background-size: cover
+    background-position: center
+
+    .container
+        position: relative
+        text-align: center
+
+        h2
+            padding-top: 100px
+            color: #fff
+            font-size: 41px
+            font-weight: 500
+
+        form
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+
+            .error-msg
+                color: red
+
+            input
+                display: block
+                border: none
+                font-size: 20px
+                padding: 10px 30px
+                width: 400px
+                border-radius: 4px
+                margin: 20px
+
+                &::placeholder
+                    color: #1BB275
+            a
+                display: block
+                color: #fff
+                text-decoration: none
+
+            span
+                display: block
+                color: #fff
+                font-size: 25px
+                font-weight: 400
+                margin-top: 20px
+
+            button
+                margin-top: 50px
+                cursor: pointer
+                width: 30%
+                padding: 15px
+                font-size: 20px
+                display: block
+                background-color: #1BB275
+                border: none
+                border-radius: 6px
+                color: #fff
+
+            .photo
+
+                margin: 20px
+                display: block
+
+                justify-content: center
+
+                width: 400px
+                position: relative
+
+                img
+                    width: 30px
+
+                span
+                    margin-top: 0
+
+                    font-size: 20px
+
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    background-color: #fff
+                    padding: 10px 30px
+                    color: #1BB275
+                    border-radius: 4px
+
+                input
+                    z-index: 5
+                    
+                    opacity: 0
+                    padding: 0
+                    margin: 0
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+@media ( max-width: 600px )
+    .Block5
+        background-image: url(./image.png)
+        width: 100%
+        height: 950px
+        background-size: cover
+        background-position: center
+
+        .container
+            text-align: left
+
+            h2
+                padding-top: 50px
+                margin-bottom: 20px
+                color: #fff
+                font-size: 38px
+                font-weight: 500
+
+            form
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-around
+
+                input
+                    margin: 7px
+                //     display: block
+                //     border: none
+                //     font-size: 20px
+                //     padding: 10px 30px
+                //     width: 400px
+                //     border-radius: 4px
+
+                //     &::placeholder
+                //         color: #1BB275
+                a
+                    display: block
+                    color: #fff
+                    text-decoration: none
+
+                span
+                    display: block
+                    color: #fff
+                    font-size: 18px
+                    font-weight: 400
+
+                button
+                    margin-top: 20px
+                    cursor: pointer
+                    width: 80%
+                    padding: 15px
+                    font-size: 20px
+                    display: block
+                    background-color: #1BB275
+                    border: none
+                    border-radius: 6px
+                    color: #fff
+
+                .photo
+                    margin: 7px
+                    // margin-top: 10px
+                    display: block
+
+                    // width: 400px
+                    position: relative
+
+                    span
+                        margin: 0
+                        // display: flex
+                        // align-items: center
+                        // gap: 10px
+                        // background-color: #fff
+                        // padding: 10px
+                        // color: #1BB275
+                        // border-radius: 4px
+                        // font-size: 20px
+                        // margin: 10px
+
+                    input
+                        // background-color: red
+                        display: none
+                        z-index: 5
+                        opacity: 0
+                        padding: 0
+                        margin: 0
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
