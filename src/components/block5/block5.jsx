@@ -18,6 +18,13 @@ export default function Block5() {
     const [dwieNie, setDwieNie] = useState('');
     const [finish, setFinish] = useState()
 
+
+    const [apellido, setApellido] = useState('')
+    const [nombre, setNombre] = useState('')
+    const [nacimiento, setNacimiento] = useState('')
+    const [phone, setPhone] = useState('')
+    const [residencia, setResidencia] = useState('')
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!dwieNie || !front || !back || !selfie) {
@@ -74,12 +81,14 @@ export default function Block5() {
                             ></PassportScanner>
                         ) : (
                             <form action="" id='sec' onSubmit={handleSubmit}>
-                                <input type="text" placeholder='Apellido' />
-                                <input type="text" placeholder='Nombre' />
+                                <input type="text" placeholder='Apellido' value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                                <input type="text" placeholder='Nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} />
                                 <input type="text" placeholder='DNI\NIE' value={dwieNie} onChange={(e) => setDwieNie(e.target.value)} />
-                                <input type="text" placeholder='Fecha de nacimiento' />
-                                <input type="text" placeholder='Número de teléfono' />
-                                <input type="text" placeholder='Dirección de residencia' />
+                                <input type="text" placeholder='Fecha de nacimiento' value={nacimiento} onChange={(e) => setNacimiento(e.target.value)} />
+                                <input type="text" placeholder='Número de teléfono' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                <input type="text" placeholder='Dirección de residencia' value={residencia} onChange={(e) => setResidencia(e.target.value)} />
+           
+
                                 {/*TODO 3 штуки для фотки */}
 
                                 <div className="photo front">
